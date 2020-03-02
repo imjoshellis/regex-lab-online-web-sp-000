@@ -11,7 +11,9 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  return text.scan(/[a-zA-Z].*[.]/).each.match(/[A-Z]+(\w*|\W*)+[\.\?\!]/) ? true : false
+  total_sentences = text.scan(/[a-zA-Z].*[.]/).length
+  valid_sentences = text.scan(/[A-Z]+(\w*|\W*)+[\.\?\!]/)
+  return total_sentences == valid_sentences ? true : false
 end
 
 def valid_phone_number?(phone)
