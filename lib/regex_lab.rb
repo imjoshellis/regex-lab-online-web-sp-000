@@ -20,5 +20,5 @@ valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
 invalid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
 
 def valid_phone_number?(phone)
-  if phone.match(\(?\d{3}\)?\s?\d{3}(-?|\s?)\d{4}) ? true : false
+  if phone.match(/\(?\d{3}\)?\s?\d{3}(-?|\s?)\d{4}/) ? true : false
 end
