@@ -3,7 +3,7 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  return text.scan(/(\Aun|\zing)/)
+  return text.scan(/\bun\S*|\b\S*ing/)
 end
 
 def words_five_letters_long(text)
