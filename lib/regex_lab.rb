@@ -13,7 +13,7 @@ end
 def first_word_capitalized_and_ends_with_punctuation?(text)
   total_sentences = text.scan(/[a-zA-Z].*[.]/).length()
   valid_sentences = text.scan(/[A-Z]+(\w*|\W*)+[\.\?\!]/).length()
-  return total_sentences == valid_sentences ? true : false
+  return total_sentences == valid_sentences && valid_sentences > 0 ? true : false
 end
 
 def valid_phone_number?(phone)
