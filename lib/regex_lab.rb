@@ -16,6 +16,9 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   return total_sentences == valid_sentences && valid_sentences > 0 ? true : false
 end
 
-def valid_phone_number?(phone)
+valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
+invalid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
 
+def valid_phone_number?(phone)
+  if phone.match(\(?\d{3}\)?\s?\d{3}(-?|\s?)\d{4}) ? true : false
 end
